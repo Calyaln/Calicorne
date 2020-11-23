@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* set :root rules (color, px) */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    font-family: "Varela Round";
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; 
+    position: relative;
+    /* why space-around is not working? */
+}
+
+#timesup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+#timesup a {
+    text-decoration: none;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.gif img {
+    background-image: url(../images/giphy_finish.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 500px;
+    box-shadow: 1px 1px 5px black;
+}
+
+.play-btn {
+    padding: 15px 45px;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    box-shadow: 0;
+    border: 0;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+}
+
+.play-btn a {
+    text-decoration: none;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#play-btn:hover {
+    border: 1px solid grey;
+    filter: grayscale(50%);
+    cursor: pointer;
+}
+
+#credit {
+    font-size: 10px;
+    padding: 30px;
+    position: fixed;
+    bottom: 0;
+
+}
+
+#credit a {
+    text-decoration: none;
+    color: black;
+}
+
+
