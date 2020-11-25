@@ -38,7 +38,8 @@ body {
     text-align: center;
     padding: 10px;
     margin: 10px;
-    margin-bottom: 150px;
+    margin-bottom: 200px;
+    font-size: 50px;
     position: relative;
     background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
     -webkit-background-clip: text;
@@ -65,35 +66,38 @@ body {
     align-items: center;
     justify-content: space-around;
     height: 200px;
-    padding: 20px;
+    padding: 50px;
     margin: 20px;
     margin-bottom: 30px;
     box-shadow: 1px 1px 5px black;
     font-size: 18px;
+    color: indigo;
 }
 
 .item {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 3px;
 }
 
 .play-btn {
-    padding: 15px 45px;
+    padding: 20px 70px;
     border-radius: 15px;
     margin-bottom: 20px;
-    font-size: 25px;
+    font-size: 30px;
     box-shadow: 0;
     border: 0;
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/background2.jpg);
     background-size: cover;
 }
 
 .play-btn a {
     text-decoration: none;
-    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    color: indigo;
+    /* background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
     -webkit-background-clip: text;
-    color: transparent;
+    color: transparent; */
 }
 
 .play-btn:hover {

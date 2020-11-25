@@ -15,7 +15,7 @@ export class Emoji {
 
     create() {
         const element = document.createElement('div');
-        element.className = this.emojiType;
+        element.className = this.emojiType + ' emoji';
         return element;
     }
 
@@ -29,30 +29,5 @@ export class Emoji {
             this.element.style.gridColumn =this.gridColumn;
             this.element.style.gridRow = this.gridRow;
     }
-
     // voir comment stopper et restart des drop/element 
-
-    // killEmoji() {
-    //     // if this.emoji + position = end of grid then delete ?
-    //     delete this
-    // }
-
 }
-
-// CLASS PLAYER UNICORN
-// class Player {
-//     constructor(emoji)
-// }
-
-// unicorn.moveLeft()
-// unicorn.moveRight()
-
-// check collision 
-// check score 
-
-
-// if unicorn collide with this.rainbow then score + this.point
-// add magical sound from library
-
-// else unicorn collide with other this.emoji score - this.point
-// find bad sound

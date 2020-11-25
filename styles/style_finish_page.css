@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
-/* set :root rules (color, px) */
-
 * {
     margin: 0;
     padding: 0;
@@ -31,16 +29,17 @@ body {
     /* why space-around is not working? */
 }
 
-#timesup {
+#gameover {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
     margin: 20px;
+    font-size: 50px;
 }
 
-#timesup a {
+#gameover a {
     text-decoration: none;
     background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
     -webkit-background-clip: text;
@@ -56,14 +55,14 @@ body {
 }
 
 .play-btn {
-    padding: 15px 45px;
+    padding: 20px 50px;
     border-radius: 15px;
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 25px;
+    font-size: 30px;
     box-shadow: 0;
     border: 0;
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/background2.jpg);
     background-size: cover;
 }
 
@@ -74,7 +73,7 @@ body {
     color: transparent;
 }
 
-#play-btn:hover {
+.play-btn:hover {
     /* border: 1px solid grey; */
     filter: grayscale(50%);
     cursor: pointer;

@@ -61,6 +61,7 @@ body {
     justify-content: space-around;
     padding: 20px;
     position: relative;
+    color: indigo;
 }
 
 #credit {
