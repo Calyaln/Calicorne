@@ -82,7 +82,7 @@ body {
 }
 
 .play-btn {
-    padding: 20px 70px;
+    padding: 20px 80px;
     border-radius: 15px;
     margin-bottom: 20px;
     font-size: 30px;
@@ -106,14 +106,24 @@ body {
     cursor: pointer;
 }
 
-#credit {
-    font-size: 10px;
-    padding: 30px;
+.about-btn {
+    padding: 20px 70px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    box-shadow: 0;
+    border: 0;
+    background-image: url(../images/background2.jpg);
+    background-size: cover;
 }
 
-#credit a {
+.about-btn a {
     text-decoration: none;
-    color: black;
+    color: indigo;
 }
 
-
+.about-btn:hover {
+    /* border: 1px solid grey; */
+    filter: grayscale(50%);
+    cursor: pointer;
+}

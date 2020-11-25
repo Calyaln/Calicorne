@@ -2,17 +2,20 @@ import {Emoji} from "./emojis.js";
 
 
 // GENERAL ELEMENTS
-// Music
+// Music - Theme song
 let themeSong = new Audio('../sounds/game.mp3');
 themeSong.loop = true;
 themeSong.volume = 0.3;
 
+// Music - sound effect rainbow
+let soundEffect = document.createElement('audio');
+soundEffect.src = '../sounds/rainbow.mp3';
 
 // Grid & Player
 let container = document.getElementById('board');
 let unicorn = document.getElementById('unicorn');
 let gridColumn = 1;
-let gridRow = 6;
+let gridRow = 15;
 
 // Emojis
 let star = document.getElementsByClassName('star');
@@ -38,14 +41,16 @@ function moveUnicorn() {
             unicorn.style.gridColumn = gridColumn++;
         } else {
             unicorn.style.gridColumn = gridColumn--;
+            document.getElementById('unicorn').style.transform = 'scaleX(1)';
         }
         break;
 
         case "ArrowRight": 
-        if(gridColumn >= 6) {
-            unicorn.style.gridColumn = 6;
+        if(gridColumn >= 15) {
+            unicorn.style.gridColumn = 15;
         } else {
             unicorn.style.gridColumn = gridColumn++;
+            document.getElementById('unicorn').style.transform = 'scaleX(-1)';
         }
         break;
     }
@@ -55,11 +60,11 @@ window.onkeydown = moveUnicorn;
 
 // CREATE INSTANCES OF EMOJI
 let newStar = new Emoji ('star', 1, 1, -1);
-let newHeart = new Emoji ('heart', 1, 2, -2);
-let newGem = new Emoji ('gem', 1, 3, -1);
-let newFlower = new Emoji ('flower', 1, 4, -1);
-let newCupcake = new Emoji ('cupcake', 1, 5, -2);
-let newRainbow = new Emoji ('rainbow', 1, 6, 2);
+let newHeart = new Emoji ('heart', 1, 3, -2);
+let newGem = new Emoji ('gem', 1, 5, -1);
+let newFlower = new Emoji ('flower', 1, 8, -1);
+let newCupcake = new Emoji ('cupcake', 1, 12, -2);
+let newRainbow = new Emoji ('rainbow', 1, 15, 2);
 
 
 // SET EMOJI INTERVAL
@@ -87,31 +92,20 @@ function stopInterval() {
 
 
 //CHECK COLLISION & SET SCORE
-let soundEffect = new Audio('../rainbow.mp3');
-soundEffect.loop = true;
-soundEffect.volume = 0.7;
-
-
 let arrEmojis = [newStar, newHeart, newGem, newFlower, newCupcake, newRainbow];
 
 function checkCollison(array) {
 
     arrEmojis.forEach(function(emoji) {
+
         if(emoji.gridRow === gridRow && emoji.gridColumn === gridColumn) {
             score += emoji.point;
             scoreElement.textContent = score;
+            console.log(score);
 
             if (emoji.point > 0) {
-                console.log('yes');
                 soundEffect.play();
-            } else {
-                console.log('no');
-            }
-
-
-            // playSoundEffect() {
-            //     //only for the rainbows ???
-            // }   
+            }  
         } 
         return true;
     });
@@ -120,8 +114,8 @@ function checkCollison(array) {
 let intervalId2 = setInterval(() => {
     checkCollison(arrEmojis);
     checkScore();
-}, 200);
-// utiliser requestAnimationFrame() pour avoir toutes les collisions 
+}, 100);
+// utiliser requestAnimationFrame() ?
 
 
 // STOP GAME & CLEAR EMOJIS

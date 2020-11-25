@@ -29,8 +29,8 @@ body {
 
 #board {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(15, 1fr);
     height: 600px;
     width: 600px;
     /* background: #FFCFE0; */
@@ -82,11 +82,10 @@ body {
     background-repeat: no-repeat;
     width: 50px;
     height: 50px;
-    margin-top: 40px;
+    margin-top: 70px;
     z-index: 1;
     grid-column: 1;
-    grid-row: 6;
-    transform: scaleX(-1);
+    grid-row: 13;
     position: absolute;
 }
 
@@ -104,7 +103,7 @@ body {
     width: 30px;
     height: 30px;
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 3;
     background-image: url(../images/heart.png); 
     background-size: contain;
     background-repeat: no-repeat;
@@ -114,7 +113,7 @@ body {
     width: 30px;
     height: 30px;
     grid-column: 1;
-    grid-row: 3;
+    grid-row: 5;
     background-image: url(../images/gem.png); 
     background-size: contain;
     background-repeat: no-repeat;
@@ -124,7 +123,7 @@ body {
     width: 30px;
     height: 30px;
     grid-column: 1;
-    grid-row: 4;
+    grid-row: 8;
     background-image: url(../images/flower.png); 
     background-size: contain;
     background-repeat: no-repeat;
@@ -134,7 +133,7 @@ body {
     width: 30px;
     height: 30px;
     grid-column: 1;
-    grid-row: 5;
+    grid-row: 12;
     background-image: url(../images/cupcake.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -144,7 +143,7 @@ body {
     width: 30px;
     height: 30px;
     grid-column: 1;
-    grid-row: 6;
+    grid-row: 15;
     background-image: url(../images/rainbow.png); 
     background-size: contain;
     background-repeat: no-repeat;

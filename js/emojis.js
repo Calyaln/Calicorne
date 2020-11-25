@@ -1,8 +1,4 @@
-// import {unicorn} from "./calicorne_world.js";
-// import {moveUnicorn} from "./calicorne_world.js";
-
-
-// CLASS EMOJI
+// CREATE CLASS EMOJI
 export class Emoji {
     constructor(emojiType, gridColumn, gridRow, point) {
         this.emojiType = emojiType;
@@ -13,21 +9,23 @@ export class Emoji {
         document.getElementById('board').appendChild(this.element);
     }
 
+
+    // CREATE EMOJIS IN HTML
     create() {
         const element = document.createElement('div');
         element.className = this.emojiType + ' emoji';
         return element;
     }
 
+    // DRAW RANDOMLY THE EMOJIS ON THE GRID
     dropEmoji() {
-            if(this.gridRow >= 6) {
+            if(this.gridRow >= 15) {
                 this.gridRow = 1;
-                this.gridColumn = 1 + Math.floor(Math.random() * 6);
+                this.gridColumn = 1 + Math.floor(Math.random() * 15);
             } else {
                 this.gridRow += 1;
             }
-            this.element.style.gridColumn =this.gridColumn;
+            this.element.style.gridColumn = this.gridColumn;
             this.element.style.gridRow = this.gridRow;
     }
-    // voir comment stopper et restart des drop/element 
 }
