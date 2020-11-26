@@ -1,14 +1,17 @@
 import { Emoji } from "./emojis.js";
 
 // GENERAL ELEMENTS
-// Music - Theme song
+// Music - Theme song game page
 let themeSong = new Audio("../sounds/game.mp3");
 themeSong.loop = true;
-themeSong.volume = 0.3;
+themeSong.volume = 0.5;
 
-// Music - sound effect rainbow
-let soundEffect = document.createElement("audio");
-soundEffect.src = "../sounds/rainbow.mp3";
+// Music - Theme song Homepage
+// let themeSongHp = document.createElement('audio');
+// themeSongHp.src = "../sounds/game.mp3";
+
+let soundEffect = new Audio("../sounds/rainbow.mp3");
+soundEffect.volume = 0.1;
 
 // Grid & Player
 let container = document.getElementById("board");
@@ -26,7 +29,7 @@ let rainbow = document.getElementsByClassName("rainbow");
 
 // Score
 let scoreElement = document.querySelector(".score-value");
-let score = 20;
+let score = 10;
 
 // MOVE UNICORN
 function moveUnicorn() {
@@ -71,16 +74,13 @@ let arrEmojis = [newStar, newHeart, newGem, newFlower, newCupcake, newRainbow];
 function checkCollison(array) {
   arrEmojis.forEach(function (emoji) {
     if (emoji.gridRow === gridRow && emoji.gridColumn === gridColumn) {
+      emoji.gridColumn += 2; // so the condition is false
       score += emoji.point;
       scoreElement.textContent = score;
-
-      // create class unicorn
-      // make unicorn intangible for a certain moment so it doesn't loose all its points when touched by an emoji
 
       if (emoji.point > 0) {
         soundEffect.play();
       }
-
       return false;
     }
   });
@@ -93,6 +93,7 @@ let time = 0;
 
 function step(timestamp) {
   checkCollison(arrEmojis);
+  checkScore();
 
   if (time % 60 === 0) {
     newStar.dropEmoji();
@@ -119,10 +120,7 @@ function checkScore() {
     clearEmojis();
     loadGameOver();
   }
-  return true;
 }
-
-checkScore();
 
 // CLEAR EMOJIS
 function clearEmojis() {
@@ -132,37 +130,15 @@ function clearEmojis() {
 
 // LOAD FINISH PAGE
 function loadGameOver() {
+  console.log("game over");
   setTimeout(() => {
     document.querySelector("body").innerHTML = finishPage;
   }, 2000);
 }
 
 // LINK TO FINISH PAGE
-let finishPage =
-  '<div class="main-container"><h1 id="gameover"><a href="./index.html">GAME OVER</a></h1><div id="gif"><img src="./images/giphy_finish.gif" alt="adventuretime_gif" ></div><div id="play"><button class="play-btn" type="button"><a href="./game_page.html">Play again!</a></button></div><div id="credit"><p><a href="https://github.com/Calyaln/Calicorne">A game by Calypso Asline</a></p</div></div>';
+let finishPage;
 
-// To check later :
-// axios.get('./finish_page.html').then((res) => {
-//     finishPage = res.data;
-//     let body = finishPage.indexOf("body");
-//     let body2 = finishPage.substring(body+4).indexOf("body")
-//         console.log(finishPage.substring(body,body2))
-//     });
-
-// SET EMOJI INTERVAL
-// let intervalId;
-
-// function startInterval() {
-//   intervalId = setInterval(() => {
-
-//   }, 300);
-// }
-
-// startInterval();
-
-// function stopInterval() {
-//   clearInterval(intervalId);
-//   clearInterval(intervalId2);
-// }
-
-// stopInterval();
+axios.get("./finish_page.html").then((res) => {
+  finishPage = res.data;
+});
