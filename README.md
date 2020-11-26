@@ -1,8 +1,6 @@
-Calicorne
+Calicorne 🦄 🌈
 
-Game to play only on Desktop.
-
-Play game here: add link
+Play game here: calyaln.github.io/Calicorne/index.html
 
 Objectives
 
@@ -18,6 +16,10 @@ If collision with rainbows, gain some points.
 
 If collision with the others, loose points.
 
-To play, click here : add link
+When your score reaches 0, the game will end.
+
+To play, click here : calyaln.github.io/Calicorne/index.html
+
+Only on Desktop.
 
 Pegi 3.
