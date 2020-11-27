@@ -2,19 +2,19 @@ import { Emoji } from "./emojis.js";
 
 // GENERAL ELEMENTS
 // Music - Theme song game page
-let themeSong = document.getElementById("themesong");
-themeSong.loop = true;
-themeSong.volume = 0.5;
-
-// let themeSong = new Audio("./../sounds/game.mp3");
+// let themeSong = document.getElementById("themesong");
 // themeSong.loop = true;
 // themeSong.volume = 0.5;
 
-let soundEffect = document.getElementById("soundeffect");
-soundEffect.volume = 0.1;
+let themeSong = new Audio("./sounds/game.mp3");
+themeSong.loop = true;
+themeSong.volume = 0.5;
 
-// let soundEffect = new Audio("./../sounds/rainbow.mp3");
+// let soundEffect = document.getElementById("soundeffect");
 // soundEffect.volume = 0.1;
+
+let soundEffect = new Audio("./sounds/rainbow.mp3");
+soundEffect.volume = 0.1;
 
 // Grid & Player
 let container = document.getElementById("board");
