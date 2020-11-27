@@ -8,10 +8,8 @@ let themeSong = new Audio("./../sounds/game.mp3");
 themeSong.loop = true;
 themeSong.volume = 0.5;
 
-let soundEffect = document.getElementById("soundeffect");
+let soundEffect = new Audio("./../sounds/rainbow.mp3");
 soundEffect.volume = 0.1;
-
-// let soundEffect = new Audio("./../sounds/rainbow.mp3");
 
 // Grid & Player
 let container = document.getElementById("board");
