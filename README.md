@@ -1,6 +1,6 @@
 Calicorne 🦄 🌈
 
-Play game here: calyaln.github.io/Calicorne/index.html
+Play game here: https://calyaln.github.io/Calicorne/index.html
 
 Objectives
 
@@ -18,7 +18,7 @@ If collision with the others, loose points.
 
 When your score reaches 0, the game will end.
 
-To play, click here : calyaln.github.io/Calicorne/index.html
+To play, click here : https://calyaln.github.io/Calicorne/index.html
 
 Only on Desktop.
 

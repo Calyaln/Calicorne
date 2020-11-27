@@ -81,6 +81,7 @@ body {
     margin: 20px;
     margin-bottom: 30px;
     box-shadow: 1px 1px 5px black;
+    border-radius: 10px;
     font-size: 18px;
     font-family: 'Varela';
     color: indigo;

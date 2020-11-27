@@ -2,15 +2,11 @@ import { Emoji } from "./emojis.js";
 
 // GENERAL ELEMENTS
 // Music - Theme song game page
-let themeSong = new Audio("../sounds/game.mp3");
+let themeSong = new Audio("./../sounds/game.mp3");
 themeSong.loop = true;
 themeSong.volume = 0.5;
 
-// Music - Theme song Homepage
-// let themeSongHp = document.createElement('audio');
-// themeSongHp.src = "../sounds/game.mp3";
-
-let soundEffect = new Audio("../sounds/rainbow.mp3");
+let soundEffect = new Audio("./../sounds/rainbow.mp3");
 soundEffect.volume = 0.1;
 
 // Grid & Player
@@ -74,7 +70,7 @@ let arrEmojis = [newStar, newHeart, newGem, newFlower, newCupcake, newRainbow];
 function checkCollison(array) {
   arrEmojis.forEach(function (emoji) {
     if (emoji.gridRow === gridRow && emoji.gridColumn === gridColumn) {
-      emoji.gridColumn += 2; // so the condition is false
+      emoji.gridColumn += 2; // so the condition is false (to enable 60 frame/sec)
       score += emoji.point;
       scoreElement.textContent = score;
 
@@ -87,7 +83,7 @@ function checkCollison(array) {
   return true;
 }
 
-// CHECK EMOJIS DROP
+// LAUNCH EMOJIS DROP & SPEED
 let frameId;
 let time = 0;
 
@@ -95,7 +91,7 @@ function step(timestamp) {
   checkCollison(arrEmojis);
   checkScore();
 
-  if (time % 60 === 0) {
+  if (time % 20 === 0) {
     newStar.dropEmoji();
     newHeart.dropEmoji();
     newGem.dropEmoji();
@@ -130,7 +126,6 @@ function clearEmojis() {
 
 // LOAD FINISH PAGE
 function loadGameOver() {
-  console.log("game over");
   setTimeout(() => {
     document.querySelector("body").innerHTML = finishPage;
   }, 2000);
