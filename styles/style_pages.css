@@ -201,7 +201,7 @@
     position: relative;
 }
 
-#gameover {
+#finish {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,7 +211,7 @@
     font-size: 50px;
 }
 
-#gameover a {
+#finish a {
     text-decoration: none;
     font-family: Powerpuff;
     background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);

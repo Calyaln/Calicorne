@@ -107,6 +107,10 @@ function checkScore() {
 
     clearEmojis();
     loadGameOver(finishPage);
+
+  } else if (score >= 20) {
+    clearEmojis();
+    loadCongrats(congratsPage);
   }
 }
 
@@ -123,12 +127,30 @@ function loadGameOver(finishPage) {
   }, 2000);
 }
 
-// LINK TO FINISH PAGE
+// LOAD CONGRATS PAGE
+function loadCongrats(congratsPage) {
+  setTimeout(() => {
+    document.querySelector("body").innerHTML = congratsPage;
+  }, 2000);
+}
+
+// LINK TO GAME OVER PAGE
 let finishPage;
 
 try {
   axios.get("./gameover_page.html").then((res) => {
     finishPage = res.data;
+  });
+} catch(err) {
+  console.log(err);
+}
+
+// LINK TO CONGRATS PAGE
+let congratsPage;
+
+try {
+  axios.get("./congrats_page.html").then((res) => {
+    congratsPage = res.data;
   });
 } catch(err) {
   console.log(err);
