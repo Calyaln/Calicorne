@@ -84,9 +84,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    font-size: 20px;
+    padding-top: 20px;
     margin: 20px;
- 
 }
 
 #title-game a {
@@ -100,7 +100,7 @@
 .tracker {
     display: flex;
     justify-content: space-around;
-    padding: 20px;
+    padding: 10px;
     position: relative;
     color: indigo;
     font-family: Powerpuff;
@@ -108,7 +108,6 @@
 
 #credit {
     font-size: 10px;
-    padding: 30px;
     display: flex;
     justify-content: center;
 }
@@ -192,7 +191,7 @@
     background-repeat: no-repeat;
  }
 
-/* STYLE FOR THE GAME OVER PAGE */
+/* STYLE FOR THE GAME OVER & CONGRATS PAGES */
  .finish-container {
     display: flex;
     flex-direction: column;
