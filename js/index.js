@@ -21,10 +21,10 @@ let score = 10;
 
 // Create emojis instances
 let newStar = new Emoji("star", 1, 1, -1);
-let newHeart = new Emoji("heart", 1, 3, -2);
+let newHeart = new Emoji("heart", 1, 3, -1);
 let newGem = new Emoji("gem", 1, 5, -1);
 let newFlower = new Emoji("flower", 1, 8, -1);
-let newCupcake = new Emoji("cupcake", 1, 12, -2);
+let newCupcake = new Emoji("cupcake", 1, 12, -1);
 let newRainbow = new Emoji("rainbow", 1, 15, 2);
 
 // MOVE UNICORN
