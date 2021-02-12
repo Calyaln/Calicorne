@@ -12,7 +12,7 @@ https://calyaln.github.io/Calicorne/index.html
 
 ### `Installation`
 
-Once the dependencies are installed, you can run `lite-server` to start the application.<br />
+You can run `lite-server` to start the application.<br />
 
 ### `License`
 
